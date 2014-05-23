@@ -1,0 +1,18 @@
+<%= simple_form_for @customer, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :name %>
+  <%= f.input :number %>
+  <%= f.input :customer_type %>
+  <%= f.input :phone %>
+  <%= f.input :website %>
+  <%= f.input :location %>
+  <%= f.input :address %>
+  <%= f.input :city %>
+  <%= f.input :state %>
+  <%= f.input :zip %>
+  <%= f.input :plus_four %>
+  <div class="form-actions">
+    <%= f.button :submit, :class => 'btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                customers_path, :class => 'btn' %>
+  </div>
+<% end %>
